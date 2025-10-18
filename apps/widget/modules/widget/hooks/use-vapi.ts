@@ -65,7 +65,7 @@ export const useVapi = () => {
 
     if(vapi) {
       //Only for testing
-      vapi.start("ceb27d53-ee0f-4d3c-a24d-145f5937224f");
+      vapi.start("");
     }
   }
 

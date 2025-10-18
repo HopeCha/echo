@@ -3,10 +3,11 @@ import { OrganizationGuard } from "@/modeles/auth/ui/components/organization-gua
 import { SidebarProvider, SidebarTrigger } from "@workspace/ui/components/sidebar";
 import { cookies } from "next/headers";
 import { DashboardSidebar } from "../components/dashboard-sidebar";
+import { SIDEBAR_COOKIE_NAME } from "@workspace/ui/components/sidebar";
 
 export const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+  const defaultOpen = cookieStore.get(SIDEBAR_COOKIE_NAME)?.value === "true";
 
   return (
     <AuthGuard>
