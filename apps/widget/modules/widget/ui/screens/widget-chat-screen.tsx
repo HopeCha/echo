@@ -74,7 +74,7 @@ export const WidgetChatScreen = () => {
           contactSessionId,
         }
       : "skip",
-    { initialNumItems: 10 },
+    { initialNumItems: 10},
   );
 
   const { topElementRef, handleLoadMore, canLoadMore, isLoadingMore } = useInfiniteScroll({
