@@ -1,5 +1,5 @@
-import { AuthGuard } from "@/modeles/auth/ui/components/auth-guard";
-import { OrganizationGuard } from "@/modeles/auth/ui/components/organization-guard";
+import { AuthGuard } from "@/modules/auth/ui/components/auth-guard";
+import { OrganizationGuard } from "@/modules/auth/ui/components/organization-guard";
 import { SidebarProvider, SidebarTrigger } from "@workspace/ui/components/sidebar";
 import { cookies } from "next/headers";
 import { DashboardSidebar } from "../components/dashboard-sidebar";
