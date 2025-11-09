@@ -3,8 +3,8 @@ import { action, query } from "../_generated/server";
 import { components, internal } from "../_generated/api";
 import { supportAgent } from "../system/ai/agent/supportAgent";
 import { paginationOptsValidator } from "convex/server";
-// import { escalateConversation } from "../system/ai/escalateConversation";
-// import { resolveConversation } from "../system/ai/tools/resolveConversation";
+import { escalateConversation } from "../system/ai/tools/escalateConversation";
+import { resolveConversation } from "../system/ai/tools/resolveConversation";
 import { saveMessage } from "@convex-dev/agent";
 // import { search } from "../system/ai/tools/search";
 
@@ -60,11 +60,11 @@ export const create = action({
         { threadId: args.threadId },
         {
           prompt: args.prompt,
-          // tools: {
-          //   escalateConversationTool: escalateConversation,
-          //   resolveConversationTool: resolveConversation,
-          //   searchTool: search,
-          // }
+          tools: {
+            escalateConversationTool: escalateConversation,
+            resolveConversationTool: resolveConversation,
+            //searchTool: search,
+          }
         },
       )
     } else {
